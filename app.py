@@ -6,8 +6,8 @@ import google.generativeai as genai
 import os 
 app = Flask(__name__)
 # CORS(app)
-CORS(app, resources={r"*": {"origins": "*"}})
-
+# CORS(app, resources={r"*": {"origins": "*"}})
+CORS(app, supports_credentials=True, max_age=86400)
 # ----------------------------
 # INIT GEMINI API
 # ----------------------------
